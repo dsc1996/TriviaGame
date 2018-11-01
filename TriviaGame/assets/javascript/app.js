@@ -1,4 +1,4 @@
-var question_area = $("#questions")
+var question_area = $("#questions");
 
 var questions = [{
     question: "Who is the all time stolen base leader?",
@@ -32,8 +32,7 @@ var questions = [{
     question: "What is the oldest continually operating team in the MLB?",
     answers: ["New York Yankees", "Atlanta Braves", "Boston Red Socks", "Cleveland Indians"],
     correctAnswer: "Atlanta Braves"
-} 
-];
+}];
 
 var time;
 
@@ -41,21 +40,21 @@ var correctIncorrect = {
     
     correct: 0,
     incorrect: 0,
-    countdown: 120,
+    secondsLeft: 120,
 
     countdown: function() {
-        correctIncorrect.countdown--;
-        $("#counter-number").html(correctIncorrect.countdown);
-        if (correctIncorrect.countdown === 0) {
+        correctIncorrect.secondsLeft--;
+        $("#secondsLeft-number").html(correctIncorrect.secondsLeft);
+        if (correctIncorrect.secondsLeft === 0) {
           console.log("TIME UP");
           correctIncorrect.done();
         }
       },
-
+    
       start: function() {
         time = setInterval(correctIncorrect.countdown, 1000);
     
-        $("#smallWrapper").prepend("<h2>Time Remaining: <span id='counter-number'>120</span> Seconds</h2>");
+        $("#smallWrapper").prepend("<h2>Time Remaining: <span id='secondsLeft-number'>120</span> Seconds</h2>");
     
         $("#startButton").remove();
     
@@ -71,7 +70,7 @@ var correctIncorrect = {
       },
     
       done: function() {
-
+    
         $.each($("input[name='question-0']:checked"), function() {
           if ($(this).val() === questions[0].correctAnswer) {
             correctIncorrect.correct++;
@@ -150,7 +149,7 @@ var correctIncorrect = {
     
       result: function() {
     
-        clearInterval(timer);
+        clearInterval(time);
     
         $("#smallWrapper h2").remove();
     
@@ -158,14 +157,15 @@ var correctIncorrect = {
         question_area.append("<h3>Correct Answers: " + this.correct + "</h3>");
         question_area.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
         question_area.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
-
-
-$(document).on("click", "#startButton", function() {
-    correctIncorrect.start();
-  });
-  
-  
-  $(document).on("click", "#done", function() {
-    correctIncorrect.done()
-  });
-      }};
+      }
+    };
+    
+    $(document).on("click", "#startButton", function() {
+      correctIncorrect.start();
+    });
+    
+    
+    $(document).on("click", "#done", function() {
+      correctIncorrect.done()
+    });
+    
