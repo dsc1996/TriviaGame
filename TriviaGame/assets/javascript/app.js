@@ -2,35 +2,35 @@ var question_area = $("#questions");
 
 var questions = [{
     question: "Who is the all time stolen base leader?",
-    answers: ["Rickey Henderson", "Lou Brock", "Billy Hamilton", "Ty Cobb"],
+    answers: ["Rickey Henderson ", "Lou Brock ", "Billy Hamilton ", "Ty Cobb "],
     correctAnswer: "Rickey Henderson"
 } , {
     question: "How many no-hitters did Nolan Ryan throw?",
-    answers: ["4", "8", "2", "7"],
+    answers: ["4 ", "8 ", "2 ", "7 "],
     correctAnswer: "7"
 } , {
     question: "Where were the Los Angeles Dodgers orignially located?",
-    answers: ["Seattle", "Brooklyn", "San Francisco", "Charltte"],
+    answers: ["Seattle ", "Brooklyn ", "San Francisco ", "Charlotte "],
     correctAnswer: "Brooklyn"
 } , {
     question: "Which MLB pitcher has the most wins pitching?",
-    answers: ["Nolan Ryan", "Catfish Hunter", "Ty Cobb", "Randy Johnson"],
+    answers: ["Nolan Ryan ", "Catfish Hunter ", "Ty Cobb ", "Randy Johnson "],
     correctAnswer: "Ty Cobb"
 } , {
     question: "Which MLB team has the largest stadium?",
-    answers: ["Oakland Athletics", "Los Angeles Dodgers", "Texas Rangers", "Milwaukee Brewers"],
-    correctAnswer: "Los Angeles"
+    answers: ["Oakland Athletics ", "Los Angeles Dodgers ", "Texas Rangers ", "Milwaukee Brewers "],
+    correctAnswer: "Los Angeles Dodgers"
 } , {
     question: "What MLB player has been selected to the most All Star games?",
-    answers: ["Hank Aaron", "Willie Mays", "Stan Musial", "Cal Ripken Jr."],
+    answers: ["Hank Aaron ", "Willie Mays ", "Stan Musial ", "Cal Ripken Jr. "],
     correctAnswer: "Hank Aaron"
 } , {
     question: "How many hits did all time hit leader, Pete Rose, end his career with?",
-    answers: ["4301", "4201", "4256", "4259"],
+    answers: ["4301 ", "4201 ", "4256 ", "4259 "],
     correctAnswer: "4256"
 } , {
     question: "What is the oldest continually operating team in the MLB?",
-    answers: ["New York Yankees", "Atlanta Braves", "Boston Red Socks", "Cleveland Indians"],
+    answers: ["New York Yankees ", "Atlanta Braves ", "Boston Red Socks ", "Cleveland Indians "],
     correctAnswer: "Atlanta Braves"
 }];
 
